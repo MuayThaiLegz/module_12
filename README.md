@@ -1,5 +1,7 @@
 # Module 12 Challenge
 
+# Explination
+
 * In this Challenge, you’ll use various techniques to train and evaluate models with imbalanced classes. Use a logistic regression model to compare two versions of the dataset. First, you’ll use the original dataset. Second, you’ll resample the data by using the RandomOverSampler module from the imbalanced-learn library.
 
 ---
@@ -12,6 +14,8 @@ We used Pandas
 Importing the data.
 Creating dataframes with Pandas methods.
 Using Pandas methods on our dataframes.
+
+* Pandas Examples 
 ---
 ```
 # Read the CSV file from the Resources folder into a Pandas DataFrame
@@ -30,36 +34,14 @@ pandas is a Python package providing fast, flexible, and expressive data structu
 ![Pandas](https://miro.medium.com/max/819/1*Dss7A8Z-M4x8LD9ccgw7pQ.png)
 
 ---
-# Seaborn
-We used Seaborn 
-
-In creating statistical graphics 
-The heatmap to display correlations in our data. To plot detail 
-It help fortifine our inital ideas in visual form.
----
-```
-sns.catplot(
-    x='Total Liabilities',
-    y= "Total Current Assets",
-    hue="Ticker",
-    kind="bar",
-    data=isolated_companies_full_data.reset_index(),
-    aspect=4)
-```
----
-https://seaborn.pydata.org/
-Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
-
-![seaborn](https://livecodestream.dev/post/how-to-build-beautiful-plots-with-python-and-seaborn/featured_hue585f61b28a74a671118de43150c5d63_166173_680x0_resize_q75_box.jpg)
-
----
-
 # Scikit-learn
 We used Scikit-learn 
 
 * We created a `Logistic Regression Model` with the Original Data
 * We split the data into training and testing datasets by using `train_test_split`.
 * Printed `classification_report & confusion_matrix`.
+
+* Scikit-learn Examples
  ---
 ```
 # Import the train_test_learn module
@@ -71,7 +53,6 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_features, y_labels, random_state=1)
 ```
 ---
-
 
 https://scikit-learn.org/stable/
 Scikit-learn provides a range of supervised and unsupervised learning algorithms via a consistent interface in Python.
