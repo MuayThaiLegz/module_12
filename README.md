@@ -25,6 +25,24 @@ panda_df = pd.read_csv('./Resources/lending_data.csv')
 # Review the DataFrame
 # YOUR CODE HERE!
 panda_df.head()
+
+---
+
+# Separate the X variable, the features
+# YOUR CODE HERE!
+X_features = panda_df.drop(columns=['loan_status'])
+
+---
+
+# Rename the columns
+importances_df = importances_df.rename(columns={0: 'Feature', 1: 'Importance'})
+
+# Set the index
+importances_df = importances_df.set_index('Feature')
+
+# Sort the dataframe by feature importance
+importances_df = importances_df.sort_values(by='Importance',ascending=False)
+
 ```
 ---
 https://pandas.pydata.org/
@@ -51,6 +69,34 @@ from sklearn.model_selection import train_test_split
 # Assign a random_state of 1 to the function
 # YOUR CODE HERE!
 X_train, X_test, y_train, y_test = train_test_split(X_features, y_labels, random_state=1)
+
+---
+
+# Import the LogisticRegression module from SKLearn
+from sklearn.linear_model import LogisticRegression
+
+# Instantiate the Logistic Regression model
+# Assign a random_state parameter of 1 to the model
+# YOUR CODE HERE!
+
+lr = LogisticRegression(random_state=1)
+lr
+
+# Fit the model using training data
+# YOUR CODE HERE!
+lr.fit(X_train, y_train)
+
+y_pred = lr.predict(X_test)
+
+---
+
+# Generate a confusion matrix for the model
+# YOUR CODE HERE!
+confusion_matrix(model_prediction,y_test)
+
+# Print the classification report for the model
+# YOUR CODE HERE!
+print(classification_report(model_prediction,y_test))
 ```
 ---
 
