@@ -11,9 +11,9 @@
 # Pandas
 We used Pandas
 
-Importing the data.
-Creating dataframes with Pandas methods.
-Using Pandas methods on our dataframes.
+* We read the CSV file into a Pandas DataFrame. `pd.read_csv`.
+* We manipulated dataframes with Pandas methods. `X_features = panda_df.drop(columns=['loan_status'])`.
+* Using Pandas methods on our dataframes. `y_labels.value_counts()`.
 
 * Pandas Examples 
 ---
@@ -37,7 +37,7 @@ pandas is a Python package providing fast, flexible, and expressive data structu
 # Scikit-learn
 We used Scikit-learn 
 
-* We created a `Logistic Regression Model` with the Original Data
+* We created a `LogisticRegression` with the Original Data
 * We split the data into training and testing datasets by using `train_test_split`.
 * Printed `classification_report & confusion_matrix`.
 
