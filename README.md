@@ -14,12 +14,13 @@ Creating dataframes with Pandas methods.
 Using Pandas methods on our dataframes.
 ---
 ```
-balance_sheet_tanglibles.groupby(level=0).plot.bar(
-    title= ('Displays[balance_sheet_tanglibles] per Company'),
-    figsize=(17,13),
-    rot =360, 
-    grid =True, 
-    fontsize = 13)
+# Read the CSV file from the Resources folder into a Pandas DataFrame
+panda_df = pd.read_csv('./Resources/lending_data.csv')
+# YOUR CODE HERE!
+
+# Review the DataFrame
+# YOUR CODE HERE!
+panda_df.head()
 ```
 ---
 https://pandas.pydata.org/
@@ -56,24 +57,18 @@ Seaborn is a Python data visualization library based on matplotlib. It provides 
 # Scikit-learn
 We used Scikit-learn 
 
-We used StandardScaler to scale our data as needed.
-We used PCA to decompose our data down in dimensions. 
-We used Kmeans as our ML Algo.
----
+* We created a `Logistic Regression Model` with the Original Data
+* We split the data into training and testing datasets by using `train_test_split`.
+* Printed `classification_report & confusion_matrix`.
+ ---
 ```
-# Initialize the K-Means model
+# Import the train_test_learn module
+from sklearn.model_selection import train_test_split
 
-second_model4 = KMeans(n_clusters=4, random_state=1)
-
-# Fit the model
-
-second_model4.fit(scaled_data_pca_data)
-
-# Predict clusters
-second_model4 = second_model4.predict(scaled_data_pca_data)
-
-# View the resulting array
-second_model4
+# Split the data using train_test_split
+# Assign a random_state of 1 to the function
+# YOUR CODE HERE!
+X_train, X_test, y_train, y_test = train_test_split(X_features, y_labels, random_state=1)
 ```
 ---
 
